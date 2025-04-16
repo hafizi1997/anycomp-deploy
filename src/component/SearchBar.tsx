@@ -3,9 +3,7 @@ import { useState } from "react";
 import { useDropdownStore } from "@/store/dropdownStore";
 
 type SearchBarProps = {
-  onSearch: (filters: {
-    companyType: string;
-  }) => void;
+  onSearch: (filters: { companyType: string }) => void;
 };
 
 const SearchBar = ({ onSearch }: SearchBarProps) => {
@@ -15,14 +13,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   const { activeDropdown, toggleDropdown } = useDropdownStore();
 
   const handleSearch = () => {
-    onSearch({ companyType});
+    onSearch({ companyType });
   };
 
   return (
-    <div className="mt-4 bg-white rounded-full shadow-md overflow-hidden border border-gray-200">
-      <div className="flex flex-col md:flex-row items-stretch">
+    <div className="mt-4 bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+      <div className="flex flex-col gap-2 md:gap-0 md:flex-row items-stretch">
         {/* Company Type */}
-        <div className="flex-1 px-6 py-4 border-b md:border-b-0 md:border-r border-gray-200">
+        <div className="flex-1 px-4 py-4 border-b md:border-b-0 md:border-r border-gray-200">
           {activeDropdown !== "type" ? (
             <>
               <div className="text-sm text-gray-500">Company Type</div>
@@ -38,14 +36,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
               type="text"
               value={companyType}
               onChange={(e) => setCompanyType(e.target.value)}
-              className="mt-2 w-full px-3 py-2 border-0 rounded-md focus:outline-none"
+              className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none"
               placeholder="Company Type"
             />
           )}
         </div>
 
         {/* Region */}
-        <div className="flex-1 px-6 py-4 border-b md:border-b-0 md:border-r border-gray-200">
+        <div className="flex-1 px-4 py-4 border-b md:border-b-0 md:border-r border-gray-200">
           {activeDropdown !== "region" ? (
             <>
               <div className="text-sm text-gray-500">Region</div>
@@ -61,14 +59,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
               type="text"
               value={region}
               onChange={(e) => setRegion(e.target.value)}
-              className="mt-2 w-full px-3 py-2 border-0 rounded-md focus:outline-none"
+              className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none"
               placeholder="Region"
             />
           )}
         </div>
 
         {/* Date of Completion */}
-        <div className="flex-1 px-6 py-4 border-b md:border-b-0 border-gray-200">
+        <div className="flex-1 px-4 py-4 border-b md:border-b-0 border-gray-200">
           {activeDropdown !== "date" ? (
             <>
               <div className="text-sm text-gray-500">Date of Completion</div>
@@ -76,7 +74,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
                 className="font-medium cursor-pointer"
                 onClick={() => toggleDropdown("date")}
               >
-                {dateOfCompletion || "17th Feb (3 Days)"}
+                {dateOfCompletion || "Within 1 Week"}
               </div>
             </>
           ) : (
@@ -84,35 +82,20 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
               type="text"
               value={dateOfCompletion}
               onChange={(e) => setDateOfCompletion(e.target.value)}
-              className="mt-2 w-full px-3 py-2 border-0 rounded-md focus:outline-none"
+              className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none"
               placeholder="Date of Completion"
             />
           )}
         </div>
+      </div>
 
-        {/* Search Button */}
-        <div className="px-6 py-4">
-          <button
-            onClick={handleSearch}
-            className="flex items-center justify-center py-3 px-6 bg-blue-800 hover:bg-blue-900 text-white font-medium rounded-full w-full md:w-auto"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            <span>Search</span>
-          </button>
-        </div>
+      <div className="px-4 py-4 border-t border-gray-200 flex justify-end">
+        <button
+          onClick={handleSearch}
+          className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+        >
+          Search
+        </button>
       </div>
     </div>
   );

@@ -1,0 +1,22 @@
+import classNames from "classnames";
+import { HTMLAttributes, ReactNode } from "react";
+
+type CardProps = {
+  children: ReactNode;
+  className?: string;
+} & HTMLAttributes<HTMLDivElement>;
+
+const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
+  const finalClassName = classNames(
+    "bg-[#111122]/50 backdrop-blur-sm p-6 rounded-xl border border-[#f8fafc]/10",
+    className
+  );
+
+  return (
+    <div className={finalClassName} {...rest}>
+      <div>{children}</div>
+    </div>
+  );
+};
+
+export default Card;

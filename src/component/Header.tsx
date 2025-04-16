@@ -11,7 +11,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img
-                src="./image.png"
+                src="/image.png"
                 alt="AnyComp Logo"
                 className="h-10 w-auto"
               />
@@ -240,7 +240,7 @@ const Header = () => {
               <div className="ml-2 flex items-center">
                 <img
                   className="h-8 w-8 rounded-full"
-                  src="./myimage6.jpeg"
+                  src="/myimage6.jpeg"
                   alt="User"
                 />
                 <span className="px-2">Hafizi</span>
