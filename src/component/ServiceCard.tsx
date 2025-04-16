@@ -54,7 +54,7 @@ const ServiceCard = ({
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="flex">
         <button className=" py-3 px-4 text-center text-gray-800 hover:bg-gray-100 font-medium rounded-full">
           Message
         </button>
