@@ -55,10 +55,10 @@ const ServiceCard = ({
         </div>
       </div>
       <div className="flex border-t border-gray-200">
-        <button className="flex-1 py-3 px-4 text-center text-gray-800 hover:bg-gray-100 font-medium rounded-full">
+        <button className=" py-3 px-4 text-center text-gray-800 hover:bg-gray-100 font-medium rounded-full">
           Message
         </button>
-        <button className="flex-1 py-3 px-4 text-center text-white bg-blue-800 hover:bg-blue-900 font-medium rounded-full">
+        <button className=" py-3 px-4 text-center text-white bg-blue-800 hover:bg-blue-900 font-medium rounded-full">
           Incorporate
         </button>
       </div>
