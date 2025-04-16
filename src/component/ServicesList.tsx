@@ -29,7 +29,7 @@ const ServicesList = ({ filters }: ServicesListProps) => {
   const services: Service[] = [
     {
       id: 1,
-      logo: "/intell.jpg",
+      logo: "./intell.jpg",
       name: "Gobiz Cosec Firm",
       type: "Secretarial service firm",
       rating: 4.9,
@@ -41,7 +41,7 @@ const ServicesList = ({ filters }: ServicesListProps) => {
     },
     {
       id: 2,
-      logo: "/iphone.jpg",
+      logo: "./iphone.jpg",
       name: "Consistent Net",
       type: "Secretarial service firm",
       rating: 3.2,
@@ -52,7 +52,7 @@ const ServicesList = ({ filters }: ServicesListProps) => {
     },
     {
       id: 3,
-      logo: "/calling.avif",
+      logo: "./calling.avif",
       name: "Sarah Connor",
       type: "Licensed Secretary",
       rating: 5.0,
@@ -64,7 +64,7 @@ const ServicesList = ({ filters }: ServicesListProps) => {
     },
     {
       id: 4,
-      logo: "/WAU_logo.png",
+      logo: "./WAU_logo.png",
       name: "Expert Services",
       type: "Secretarial service firm",
       rating: 1.1,
@@ -77,22 +77,22 @@ const ServicesList = ({ filters }: ServicesListProps) => {
   const flips: Flips[] = [
     {
       id: 1,
-      logo: "/intell.jpg",
+      logo: "./intell.jpg",
       elaborate:"This is first flip card",
     },
     {
       id: 2,
-      logo: "/iphone.jpg",
+      logo: "./iphone.jpg",
       elaborate:"This is second flip card",
     },
     {
       id: 3,
-      logo: "/calling.avif",
+      logo: "./calling.avif",
       elaborate:"This is third flip card",
     },
     {
       id: 4,
-      logo: "/WAU_logo.png",
+      logo: "./WAU_logo.png",
       elaborate:"This is fourth flip card",
     },
   ];
